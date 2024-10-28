@@ -78,10 +78,12 @@ namespace Book.Domain.UserAgg
             Wallets.Add(wallet);
         }
 
-        public void SetRole(List<UserRole> role)
+        public void SetRole(List<UserRole> roles)
         {
+            roles.ForEach(r => r.UserId = Id);
+
             Roles.Clear();
-            Roles.AddRange(role);
+            Roles.AddRange(roles);
         }
 
         public void Guard(string phoneNumber, string email, IDomainUserService domainService)

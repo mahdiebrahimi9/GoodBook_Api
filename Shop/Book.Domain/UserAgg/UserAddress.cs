@@ -1,6 +1,5 @@
 ﻿using Common.Domain;
 using Common.Domain.Exceptions;
-using System.Security.Authentication;
 
 namespace Book.Domain.UserAgg
 {
